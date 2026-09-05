@@ -1,10 +1,10 @@
-FROM gradle:8-jdk17 AS build
+FROM gradle:jdk26-alpine AS build
 WORKDIR /app
 COPY . .
 RUN gradle build --no-daemon
 
 
-FROM azul/zulu-openjdk:17
+FROM azul/zulu-openjdk:26-latest
 
 WORKDIR /app
 
