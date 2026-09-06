@@ -83,7 +83,7 @@ public class UsuarioService {
                                     () -> new ResourceNotFoundException("Email não encontrado " + email)
                             )
             );
-        } catch (ResourceNotFoundException e) {
+        } catch (ResourceNotFoundException _) {
             throw new ResourceNotFoundException("Email não encontrado " + email);
         }
     }
